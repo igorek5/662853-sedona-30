@@ -1,8 +1,299 @@
+/*variables*/
 
 :root {
-    --basic-black: #000000;
-    --basic-white: #ffffff;
-    --basic-blue: #81B3D2;
-    --basic-extra-light:#EEEEEE;
-    --basic-gray: #888888;
+  --basic-color: #000000;
+  --basic-content-color: #ffffff;
+  --basic-content-opacity: rgba(255,255,255, 0.3);
+
+  --element-color: #81B3D2;
+  --element-hover-color: #669EC0;
+  --element-active-color: #5496BD;
+
+  --interactive-color: #766357;
+  --interactive-hover-color: #604E43;
+  --interactive-active-color: #503E33;
+
+  --text-block-color: #333333;
+  --footer-logo-color: #BDBBBC;
+
+  --basic-bg-color: #888888;
+  --block-bg-color: #EEEEEE;
+
+  --field-bg-color: #F2F2F2;
+  --field-hover-color: #EBEBEB;
+  --field-focus-color: #E5E5E5;
 }
+
+.page-body {
+  min-height: 1280px;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-color);
+  text-transform: uppercase;
+  background-color: var(--basic-bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  background-color: var(--basic-content-color);
+}
+
+/*button*/
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  color: var(--basic-content-color);
+  text-transform: uppercase;
+  background-color: var(--interactive-color);
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--interactive-hover-color);
+}
+
+.button:active {
+  background-color: var(--interactive-active-color);
+  color: var(--basic-content-opacity)
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+/*main-header*/
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation-link {
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-color);
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  color: var(--element-color);
+}
+
+.site-navigation-link:active {
+  color: var(--basic-color);
+  opacity: 0.3;
+}
+
+.site-navigation-link.active {
+  color: var(--interactive-color);
+}
+
+/*intro*/
+
+.intro {
+  background-color: var(--basic-bg-color);
+  background-image: url(../img/bg/mountains-bg.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/*advantages*/
+
+.advantages {
+  text-align: center;
+}
+
+.advantages-slogan {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.advantages-text {
+  line-height: 26px;
+}
+
+.advantages-item {
+  color: var(--basic-content-color);
+  background-color: var(--element-color);
+}
+
+.advantages-item-title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px
+}
+
+.advantages-needs-list {
+  list-style: none;
+}
+
+.advantages-needs-title {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.advantages-comfort-list {
+  list-style: none;
+  background-color: var(--block-bg-color);
+}
+
+.advantages-comfort-title {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.advantages-comfort-number {
+  color: var(--text-block-color);
+}
+
+.advantages-comfort-text {
+  color: var(--text-block-color);
+}
+
+/*search*/
+
+.search {
+  text-align: center;
+}
+
+.search-button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.search-form {
+  font-weight: bold;
+  line-height: 26px;
+  background-color: var(--basic-content-color);
+  border: 1px solid var(--basic-color);
+}
+
+.search-form-input {
+  font: inherit;
+  background-color: var(--field-bg-color);
+  border: none;
+}
+
+.search-form-input:hover {
+  background-color: var(--field-hover-color);
+}
+
+.search-form-input:focus {
+  background-color: transparent;
+  border: 2px solid var(--field-focus-color);
+  outline: none;
+}
+
+.search-calendar:hover svg,
+.search-calendar:focus svg {
+  fill: var(--basic-color);
+}
+
+.search-calendar:active svg {
+  fill: var(--element-color);
+}
+
+.search-control {
+  font: inherit;
+  border: none;
+  background-color: var(--field-bg-color);
+  cursor: pointer;
+}
+
+.search-form-button {
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--element-color);
+}
+
+.search-form-button:hover,
+.search-form-button:focus {
+  background-color: var(--element-hover-color);
+}
+
+.search-form-button:active {
+  color: var(--basic-content-opacity);
+  background-color: var(--element-active-color);
+}
+
+.search-map {
+  background-color: var(--basic-bg-color);
+}
+
+/*main-footer*/
+
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-contacts-link {
+  font: inherit;
+  color: var(--basic-color);
+}
+
+.footer-social-list {
+  list-style: none;
+}
+
+.footer-social-link {
+  font: inherit;
+  color: inherit;
+  background-color: var(--element-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--element-hover-color);
+}
+
+.footer-social-link:active {
+  background-color: var(--element-active-color);
+}
+
+.footer-social-link:active svg {
+  fill: var(--basic-content-opacity);
+}
+
+.footer-copyright {
+  line-height: 26px;
+}
+
+.footer-copyright-link:hover svg,
+.footer-copyright-link:focus svg {
+  fill: var(--element-color);
+}
+
+.footer-copyright-link:active svg {
+  fill: var(--footer-logo-color);
+}
+
+
+
+
+
+
+
+
+
+
+
