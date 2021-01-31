@@ -1,6 +1,27 @@
+/*Fonts*/
+@font-face {
+  font-family: PT Sans;
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-family: PT Sans;
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
 /*variables*/
 
 :root {
+  --basic-font-family: 'PT Sans', Arial, sans-serif;
+
   --basic-color: #000000;
   --basic-color-opasity: rgba(0,0,0, 0.3);
 
@@ -28,10 +49,9 @@
 }
 
 .page-body {
-  min-height: 1280px;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: var(--basic-font-family);
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-color);
@@ -49,6 +69,8 @@ img {
 }
 
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--basic-content-color);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
@@ -113,8 +135,9 @@ img {
 
 .intro {
   background-color: var(--image-bg-color);
-  background-image: url(../img/bg/mountains-bg.jpg);
-  background-position: 0 0;
+  background-image: url("../img/bg/mountains-bg.jpg");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -143,10 +166,6 @@ img {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px
-}
-
-.advantages-item-image {
-  background-color: var(--image-bg-color);
 }
 
 .advantages-needs-list {
@@ -244,10 +263,6 @@ img {
   background-color: var(--element-active-color);
 }
 
-.search-map {
-  background-color: var(--image-bg-color);
-}
-
 /*main-footer*/
 
 .footer-contacts {
@@ -302,8 +317,9 @@ img {
 .filter {
   color: var(--basic-content-color);
   background-color: var(--image-bg-color);
-  background-image: url(../img/bg/blurry-bg.jpg);
-  background-position: 0 0;
+  background-image: url("../img/bg/blurry-bg.jpg");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -403,10 +419,6 @@ img {
 
 .hotel-item {
   border-bottom: 1px solid var(--basic-bg-color);
-}
-
-.hotel-item-image {
-  background-color: var(--image-bg-color);
 }
 
 .hotel-item-title {
