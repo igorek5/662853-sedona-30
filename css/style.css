@@ -204,7 +204,8 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-text {
-  margin: 0;
+  width: 520px;
+  margin: 0 auto;
   margin-bottom: 50px;
   line-height: 26px;
 }
@@ -212,6 +213,7 @@ input[type="radio"].visually-hidden {
 .advantages-item {
   display: grid;
   grid-template-columns: auto auto;
+  min-height: 256px;
   color: var(--basic-content-color);
   background-color: var(--element-color);
 }
@@ -223,11 +225,15 @@ input[type="radio"].visually-hidden {
 
 .advantages-item-image {
   width: 800px;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .advantages-item-title {
+  width: 150px;
   margin: 0;
-  margin-bottom: 15px;
+  margin: 0 auto;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px
@@ -235,11 +241,12 @@ input[type="radio"].visually-hidden {
 
 .advantages-item-number{
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 }
 
 .advantages-item-text {
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .advantages-needs-list {
@@ -280,7 +287,9 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-comfort-title {
+  width: 150px;
   margin: 0;
+  margin: 0 auto;
   margin-bottom: 15px;
   font-weight: 700;
   font-size: 21px;
@@ -449,6 +458,7 @@ input[type="radio"].visually-hidden {
 /*filters*/
 
 .filter {
+  padding: 25px 73px;
   color: var(--basic-content-color);
   background-color: var(--image-bg-color);
   background-image: url("../img/bg/blurry-bg.jpg");
@@ -457,7 +467,14 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.filter-hotels fieldset {
+.filter-hotels {
+  display: grid;
+  grid-template-columns: 200px 200px 1fr;
+}
+
+.filter-hotels-group {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -467,8 +484,32 @@ input[type="radio"].visually-hidden {
   line-height: 21px
 }
 
+.filter-infrastructure legend,
+.filter-type-housing legend {
+  margin-bottom: 24px;
+}
+
+.filter-controls legend {
+  margin-bottom: 10px;
+}
+
+ .filter-infrastructure {
+  margin-right: 53px;
+}
+
 .filter-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.filter-item {
+  margin-bottom: 25px;
+}
+
+.filter-controls {
+  width: 317px;
+  justify-self: end;
 }
 
 .filter-controls-container {
@@ -483,7 +524,13 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.filter_renge {
+  margin-bottom: 33px;
+}
+
 .filter-button {
+  margin-left: 85px;
+  padding: 10px 37px;
   font: inherit;
   text-transform: uppercase;
   color: var(--basic-content-color);
@@ -503,18 +550,23 @@ input[type="radio"].visually-hidden {
 /*hotels*/
 
 .hotels-sort {
+  display: grid;
+  grid-template-columns: 127px 130px 1fr 34px;
+  padding: 30px 72px;
   font-size: 12px;
   line-height: 18px;
   border-bottom: 1px solid var(--basic-bg-color);
 }
 
 .hotels-sort-found {
+  margin: 0;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px
 }
 
 .hotels-sort-link {
+  margin-right: 32px;
   color: var(--basic-color-opasity);
   border-bottom: 1px dashed var(--element-color);
 }
@@ -548,14 +600,31 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .hotel-item {
+  display: grid;
+  grid-template-columns: auto 1fr 127px;
+  padding: 30px 72px;
   border-bottom: 1px solid var(--basic-bg-color);
 }
 
+.hotel-item-image {
+  margin-right: 29px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-item-wrapper {
+  width: 560px;
+}
+
 .hotel-item-title {
+  margin: 0;
+  margin-bottom: 3px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -575,8 +644,17 @@ input[type="radio"].visually-hidden {
   color: var(--basic-color-opasity);
 }
 
+.hotel-item-info {
+  margin-bottom: 5px;
+}
+
 .hotel-item-booking {
   color: var(--text-block-color);
+}
+
+.hotel-item-booking .button {
+  display: inline-block;
+  padding: 7px 16px;
 }
 
 .hotel-detail-link {
@@ -593,7 +671,12 @@ input[type="radio"].visually-hidden {
   background-color: var(--element-active-color);
 }
 
+.hotel-rating-block {
+  text-align: end;
+}
+
 .hotel-rating {
+  display: inline-block;
   color: var(--hotel-rating-color);
   background-color: var(--field-bg-color);
 }
