@@ -62,15 +62,15 @@
 
           <ul class="advantages-needs-list">
             <li class="advantages-needs-item">
-              <h3 class="advantages-needs-title">Жильё</h3>
+              <h3 class="advantages-needs-title advantages-needs-housing">Жильё</h3>
               <p class="advantages-needs-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="advantages-needs-item">
-              <h3 class="advantages-needs-title">Еда</h3>
+              <h3 class="advantages-needs-title advantages-needs-food">Еда</h3>
               <p class="advantages-needs-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="advantages-needs-item">
-              <h3 class="advantages-needs-title">Сувениры</h3>
+              <h3 class="advantages-needs-title advantages-needs-souvenirs">Сувениры</h3>
               <p class="advantages-needs-text">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
@@ -107,16 +107,14 @@
         <section class="search">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <span class="search-question">Заинтересовались?</span>
-          <p class="search-text">Укажите предполагаемые даты поездки, и&nbspмы&nbspпокажем&nbspвам&nbspлучшие
-            предложения гостиниц в
-            седоне
+          <p class="search-text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне
           </p>
           <div class="search-wrapper">
             <a class="button search-button" href="blank.html">Поиск гостиницы в седоне</a>
             <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
-              <div>
+              <div class="search-item">
                 <label>
-                  <span>Дата заезда:</span>
+                  <span class="search-item-label">Дата заезда:</span>
                   <input class="search-form-input" type="text" name="arrival-date" value="24 апреля 2017">
                   <a class="search-calendar" href="#" aria-label="Календарь">
                     <svg width="21" height="23" viewBox="0 0 21 23" fill="#A9A9A9" xmlns="http://www.w3.org/2000/svg">
@@ -128,9 +126,9 @@
                   </a>
                 </label>
               </div>
-              <div>
+              <div class="search-item">
                 <label>
-                  <span>Дата выезда:</span>
+                  <span class="search-item-label">Дата выезда:</span>
                   <input class="search-form-input" type="text" name="date-of-departure" value="4 июля 2017">
                   <a class="search-calendar" href="#" aria-label="Календарь">
                     <svg width="21" height="23" viewBox="0 0 21 23" fill="#A9A9A9" xmlns="http://www.w3.org/2000/svg">
@@ -142,22 +140,23 @@
                   </a>
                 </label>
               </div>
-              <div class="search-form-column">
-                <div>
+              <div class="search-form-people">
+                <div class="search-people-item">
                   <label>
-                    <span>Взрослые:</span>
-                    <input class="search-form-input" type="text" id="search-adults" name="adults" value="2">
-                  </label>
-                  <button class="search-control" type="button"><span>Уменьшить</span></button>
-                  <button class="search-control" type="button"><span>Увеличить</span></button>
+                    <span class="search-item-label search-adults-label">Взрослые:</span>
+                    <input class="search-form-input search-people-input" type="text" name="adults"
+                      value="2">
+                    </label>
+                    <button class="search-control search-control-minus" type="button" aria-label="Уменьшить"></button>
+                    <button class="search-control search-control-plus" type="button" aria-label="Увеличить"></button>
                 </div>
-                <div>
+                <div class="search-people-item">
                   <label>
-                    <span>Дети:</span>
-                    <input class="search-form-input" type="text" id="search-children" name="children" value="0">
+                    <span class="search-item-label search-children-label">Дети:</span>
+                    <input class="search-form-input search-people-input input-chil" type="text" name="children" value="0">
                   </label>
-                  <button class="search-control" type="button"><span>Уменьшить</span></button>
-                  <button class="search-control" type="button"><span>Увеличить</span></button>
+                  <button class="search-control search-control-minus control-children-minus" type="button" aria-label="Уменьшить"></button>
+                  <button class="search-control search-control-plus control-children-plus" type="button" aria-label="Увеличить"></button>
                 </div>
               </div>
               <button class="button search-form-button" type="submit">Найти</button>
@@ -177,7 +176,7 @@
           <a class="footer-contacts-link" href="tel:+74956660166">тел: +7(495) 666-01-66</a>
         </div>
 
-        <ul class="footer-social-list" aria-label="Мы в социальных сетях">
+        <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-social-link" href="#" aria-label="Твиттер">
               <svg width="17" height="16" viewBox="0 0 17 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
