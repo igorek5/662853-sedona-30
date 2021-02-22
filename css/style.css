@@ -916,6 +916,11 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
+.filter-input:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .filter-input:checked + label::before {
   width: 27px;
   background-image: url("../img/svg/checkbox-on.svg");
