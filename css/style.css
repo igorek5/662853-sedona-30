@@ -85,17 +85,17 @@ img {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	white-space: nowrap;
-	-webkit-clip-path: inset(100%);
-	clip-path: inset(100%);
-	clip: rect (0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -442,18 +442,33 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  z-index: 11;
 }
 
 .search-wrapper {
   position: absolute;
   left: 50%;
   width: 568px;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
-  overflow: hidden;
+  transform: translate(-50%);
   z-index: 10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.search-wrapper.error .search-form {
+  animation-name: form-error;
+  animation-duration: 0.6s;
+}
+
+.search-wrapper.is-active {
+  pointer-events: all;
+}
+
+.search-wrapper .search-form {
+  transform: translateY(-120%);
+}
+
+.search-wrapper.is-active .search-form {
+  transform: translateY(0);
 }
 
 .search-form {
@@ -466,24 +481,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
           box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   z-index: 10;
-}
-
-.search-form.off-form {
-  -webkit-transform: translateY(-120%);
-      -ms-transform: translateY(-120%);
-          transform: translateY(-120%);
-  -webkit-transition: 1.3s;
-  -o-transition: 1.3s;
-  transition: 1.3s;
-}
-
-.search-form.on-form {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: 1.3s;
-  -o-transition: 1.3s;
-  transition: 1.3s;
+  transition: transform 0.6s ease-in;
 }
 
 .search-item {
@@ -1347,4 +1345,10 @@ input[type="radio"].visually-hidden {
 
 .hotel-four-star::before {
   width: 80%;
+}
+
+@keyframes form-error {
+  0%, 100% { transform: translateX(0px);  }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px);  }
 }
